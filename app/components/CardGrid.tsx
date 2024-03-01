@@ -21,11 +21,6 @@ function CardGrid({ ships }: { ships: Ship[] }) {
   };
   return (
     <div>
-      <Modal
-        isOpen={isModalOpen}
-        closeModal={handleModalClose}
-        missions={modalData}
-      />
       <div className="grid grid-cols-12 gap-4">
         {ships.map((ship) => (
           <Spaceship
@@ -35,6 +30,11 @@ function CardGrid({ ships }: { ships: Ship[] }) {
           />
         ))}
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        closeModal={handleModalClose}
+        missions={modalData}
+      />
     </div>
   );
 }
